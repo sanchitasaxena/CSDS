@@ -1,0 +1,99 @@
+Part 1: Discussion Questions
+
+Runtime
+
+1. In order to find an elephant inside an animal crackers box, I would have to
+   keep putting my hand in the box to grab whatever cracker is in there, and keep 
+   taking the crackers out until I find an elephant (i don't want to put the cracker back
+   because that would make it possibly IMPOSSIBLE to find the elphant (if there is one)) 
+   and I'll at least have come to the conclusion there was/wasn't one by taking them all out.
+   This would probably be a O(n) because I'm 'appending' the cracker  i grab into a list multiple times,
+   could be x*n + 1 when I return it but that becomes n...
+
+2. Order by efficiency:
+    O(1)
+    O(log n)
+    O(n)
+    O(2n)
+    O(n log n)
+    O(n2)
+
+Stacks and Queues
+
+1. Stack or Queue?
+    1. LIFO - so a Stack
+    2. FIFI - so a Queue
+    3. LIFO - so a Stack
+2. Queue - gorcery inventory management, customer service (phone, in person)
+3. Stack - plates at a buffet, undo or ctrl Z!
+
+Linked Lists
+
+1. Nodes: a unit of a linked list containing data and a reference!
+
+box split into two is one node:  LLIST:head, 'Apple':next, 'Berry':next, 'Cherry':next
+text / data for each node: strings, 'Apple', 'Berry', 'Cherry'
+next + arrow / reference: next
+none is the end of the linked list
+
+2. doubly - you can traverse in both forward and backward directions, 
+            you have more memory per node (two pointers),
+            complexity of insertion and deletion is O(1) so faster performing
+   singly - you can only traverse in one direction,
+            uses less memory per node with just one pointer,
+            complexity of insertion and deletion is O(n),
+            good for saving memory and if less searching is required
+3. If we keep track of the tail, you know it's location so you don't have to iterate over the whole
+   linked list if you're trying to add a node.
+
+Trees
+
+1. Breadth First Search:
+    1. Starts off at food [food]
+    2. Burrito isn't food, so add food's children, [Italian, Indian, Mexican]
+    3. Pop Italian, not that, so add it's children, [Indian, Mexican, Lasagna, Pizza]
+    4. Pop Indian, not that, so add it's children, [Mexican, Lasagna, Pizza, Tikka Masala, Saag]
+    5. Pop Mexican, not that, so add it's children, [Lasagna, Pizza, Tikka Masala, Saag, Burrito, taco, enchilada]
+    6. Pop Lasagna, not that, no children, Pop Pizza, not that, add children, [Tikka Masala, Saag, Burrito, taco, enchilada, thin crust, chicago-style, ny style, sicilian]
+    7. Pop tikka masala, not that, no children, pop saag, not that, no children [Burrito, taco, enchilada, thin crust, chicago-style, ny style, sicilian]
+    8. Pop Burrito, WE FOUND BURRITO FINALLY... PTL!
+
+
+2. Depth First Search:
+    1.Starts off at food [food]
+    2. Not that, so add children, [Italian, Indian, Mexican]
+    3. Pop Mexican, add children, [Italian, Indian, burrito, tacos, enchiladas]
+    4. Pop enchiladas, no children, pop tacos, no children, pop burrito, no children [Italian, Indian]
+    5. Pop Indian, add children, [Italian, tikka masala, saag]
+    6. Pop saag, no children, pop tikka masala, no children [Italian]
+    7. Pop Italian, add children, [Lasagna, pizza]
+    8. Pop pizza, add children, [Lasanga, thin crust, chicago-style, NY style, Sicilian]
+    9. Pop Sicilian, no children, pop NY, no children, pop chicago-style, WE FOUND CHICAGO_STYLE
+       left with [Lasagna, thin crust]
+3. Binary search trees always has a left and right child and has a rule for arrangement,
+   left child being less than the node and right child being greater. Binary trees are 
+   sorted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
